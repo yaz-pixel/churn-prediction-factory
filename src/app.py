@@ -63,7 +63,7 @@ if submitted:
     # Send it to the Docker API!
     try:
         # We send a POST request to your local Docker container
-        response = requests.post("http://127.0.0.1:8000/predict", json=customer_data)
+        response = requests.post("https://churn-prediction-factory.onrender.com/predict", json=customer_data)
         response.raise_for_status() # Check for network errors
         
         # Unpack the response from the API
